@@ -15,25 +15,12 @@ This project uses two datasets:
 - **Player Dataset:** Contains information about Premier League players, including age, nationality, position, goals, assists, and other statistics.
 - **Match Dataset:** Contains historical Premier League match information, including teams, scores, dates, and match results.
 
-## Problems Found in the Original Data
-
-Some of the problems found during the cleaning process included:
-
-- Missing values in player statistics and personal information.
-- Different spellings and names for the same football clubs.
-- Player and match datasets used different club names.
-- Dates were stored using different formats.
-- Percentage statistics were stored as text instead of numbers.
-- Player names contained extra characters and spaces.
-- Some columns contained multiple match results in one value.
-- Extra index columns were included in the match dataset.
-- Some player statistics, such as goals per match, were incorrect.
 
 ## Data Cleaning Steps
 
 The following steps were used to clean the datasets:
 
-1. **Loaded the data:** Imported the player and match datasets into R. The player dataset was originally in ARFF format, so it was processed as text before being converted into a table.
+1. **Loaded the data:** Imported the player and match datasets into R. The player dataset was originally in ARFF format. Read the data in as text then converted it into a table
 
 2. **Cleaned column names:** Converted column names to lowercase and replaced special characters to make them easier to work with.
 
@@ -43,7 +30,7 @@ The following steps were used to clean the datasets:
 
 5. **Fixed percentage columns:** Removed percentage symbols and converted the values into numeric data.
 
-6. **Corrected player statistics:** Recalculated goals per match using goals and appearances. Players with zero appearances were given missing values for statistics that could not be calculated.
+6. **Handled player statistics:** Players with zero appearances were given missing values for statistics that could not be calculated.
 
 7. **Cleaned match information:** Removed unnecessary columns and corrected inconsistent club names.
 
@@ -55,8 +42,6 @@ The following steps were used to clean the datasets:
 
 ## Final Output
 
-The cleaned datasets and visualization are saved in a folder called `cleaned`.
-
 The project produces four files:
 
 - `players_clean.csv` – Cleaned player information and statistics.
@@ -67,22 +52,3 @@ The project produces four files:
 ## Visualization
 
 The final scatterplot compares the total Premier League goals of players in each club's squad with the club's historical win rate from 2000–2018.
-
-This helps explore whether clubs with players who have scored more career goals also tend to have higher historical win rates.
-
-## Tools Used
-
-- R
-- Tidyverse
-- Lubridate
-- ggplot2
-
-## How to Run the Project
-
-1. Download the original player and match datasets.
-2. Place both datasets in the project folder.
-3. Make sure the filenames match the ones used in the R script.
-4. Install the required R packages if they are not already installed.
-5. Run the R script.
-
-The cleaned files and visualization will automatically be saved in the `cleaned` folder.
