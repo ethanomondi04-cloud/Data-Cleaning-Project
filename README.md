@@ -44,10 +44,10 @@ The following steps were used to clean the datasets:
 
 The project produces four files:
 
-- `players_clean.csv` – Cleaned player information and statistics.
-- `matches_clean.csv` – Cleaned match information and results.
-- `club_merged.csv` – Combined player and club performance summaries.
-- `goals_vs_win_rate.png` – Scatterplot comparing total player goals with historical club win rates.
+- players_clean.csv – Cleaned player information and statistics.
+- matches_clean.csv – Cleaned match information and results.
+- club_merged.csv – Combined player and club performance summaries.
+- goals_vs_win_rate.png – Scatterplot comparing total player goals with historical club win rates.
 
 ## Visualization
 
